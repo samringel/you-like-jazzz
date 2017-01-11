@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Chrome but Barry Benson asks 'You like jazz?'",
+  "description": "Google Chrome but every time you load a page Barry B Benson asks 'You like jazz?'",
+  "version": "1.0.1",
+  "author":  "Sam Ringel",
+
+  "browser_action": {
+    "default_icon": "barrychrome.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "js": [ "jazzplayer.js" ]
+    }
+  ],
+
+  "icons": {
+    "16": "barrychrome16.png",
+    "48": "barrychrome48.png",
+    "128": "barrychrome128.png"
+  },
+
+  "web_accessible_resources": [
+    "jazz.mp3"
+  ]
+}
